@@ -1,0 +1,38 @@
+---
+resources:
+  - name: acrsync
+    type: git
+    source:
+      uri: https://github.com/jiege3324/acrsync.git
+      branch: master
+      username: "jiege3324"
+      password: "jie1206538127"
+jobs:
+  - name: start-image-syncer
+    serial: true
+    plan:
+      - get: acrsync
+      - task: start-image-syncer
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source:  {repository: centos}
+          inputs:
+            - name: acrsync
+          run:
+            path: ./acrsync/image-syncer.sh
+  - name: start-chart-syncer
+    serial: true
+    plan:
+      - get: acrsync
+      - task: start-chart-syncer
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source:  {repository: jingfanghua/image-sync}
+          inputs:
+            - name: acrsync
+          run:
+            path: ./acrsync/chart_sync.sh
