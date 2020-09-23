@@ -1,0 +1,16 @@
+{
+    "auth": {
+        "mbbservicepreprod.azurecr.cn": {
+            "username": "mbbservicepreprod",
+            "password": "Np8pCy6T1gDuI9wC90iJ+SdTUP4B12qs",
+            "insecure": true
+        },
+        "www.harbor.mobi": {
+            "username": "admin",
+            "password": "123456"
+        }
+    },
+    "images": {
+        "mbbservicepreprod.azurecr.cn/alpine": "www.harbor.mobi/acr/alpine"
+ }
+}
