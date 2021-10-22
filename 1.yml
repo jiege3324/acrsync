@@ -6,7 +6,7 @@ resources:
       uri: https://github.com/jiege3324/acrsync.git
       branch: master
       username: "jiege3324"
-      password: "jie1206538127"
+      password: "j1232132141347"
 jobs:
   - name: start-image-syncer
     serial: true
