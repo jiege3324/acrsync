@@ -2,7 +2,7 @@
     "auth": {
         "mbbservicepreprod.azurecr.cn": {
             "username": "mbbservicepreprod",
-            "password": "Np8pCy6T1gDuI9wC90iJ+SdTUP4B12qs",
+            "password": "Np8pCy6T1gDuI9wC90iJ+SdTUP412qs",
             "insecure": true
         },
         "www.harbor.mobi": {
